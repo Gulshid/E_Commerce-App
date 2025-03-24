@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
             builder: (BuildContext context) {
               return MaterialApp(
                 debugShowCheckedModeBanner: false,
-                title: 'Calculator App',
+                title: 'ECommerce App',
                 theme: ThemeData(
                   applyElevationOverlayColor: true,
                   brightness: Brightness.light,
@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
                     fontSizeFactor: 1.sp,
                   ),
                 ),
-                initialRoute: RoutesName.page1,
+                initialRoute: RoutesName.page2,
                 onGenerateRoute: Routes.generateRoute,
               );
             },
