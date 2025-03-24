@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
                     fontSizeFactor: 1.sp,
                   ),
                 ),
-                initialRoute: RoutesName.splash,
+                initialRoute: RoutesName.page1,
                 onGenerateRoute: Routes.generateRoute,
               );
             },

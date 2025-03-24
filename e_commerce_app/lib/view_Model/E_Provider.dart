@@ -16,7 +16,7 @@ class EProvider with ChangeNotifier {
   //define the Splash Loading delayed
   void Splash(BuildContext context) {
     Future.delayed(Duration(seconds: 3), () {
-      Navigator.pushReplacementNamed(context, RoutesName.home);
+      Navigator.pushReplacementNamed(context, RoutesName.page1);
     });
   }
 
@@ -26,8 +26,12 @@ class EProvider with ChangeNotifier {
     Splash(context);
     set_loading(false);
   }
-                  /* Provider of Splash Screen has been Completed     */
+  /* Provider of Splash Screen has been Completed     */
 
-
-  //Make Provider for Home Screen
+  //Make Provider for Home Page1
+  void page1(BuildContext context) {
+    Future.delayed(Duration(seconds: 2), () {
+      Navigator.pushReplacementNamed(context, RoutesName.page2);
+    });
+  }
 }
