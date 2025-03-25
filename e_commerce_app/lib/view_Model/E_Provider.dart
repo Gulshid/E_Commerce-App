@@ -1,5 +1,6 @@
 import 'package:e_commerce_app/Utils_/Routes/Routes_name.dart';
 import 'package:flutter/widgets.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class EProvider with ChangeNotifier {
   //Make Provider for Splash Screen
@@ -36,9 +37,19 @@ class EProvider with ChangeNotifier {
   }
 
   //for Button colot change
-  bool c_index=true;
-  void change_Color(bool value){
-    c_index=value;
-    notifyListeners();   
+  bool c_index = true;
+  void change_Color(bool value) {
+    c_index = value;
+    notifyListeners();
+  }
+
+  //url launcher
+  final Uri url = Uri.parse('https://www.google.com/');
+  // ignore: unused_element
+  Future<void> launcherurl() async {
+    if (!await launchUrl(url)) {
+      throw Exception('Could not Launched $url');
+    }
+    notifyListeners();
   }
 }
