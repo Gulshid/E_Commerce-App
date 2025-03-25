@@ -3,6 +3,7 @@ import 'package:e_commerce_app/view_/Splash_view.dart';
 import 'package:e_commerce_app/view_/home_view.dart';
 import 'package:e_commerce_app/view_/page_1.dart';
 import 'package:e_commerce_app/view_/page_2.dart';
+import 'package:e_commerce_app/view_/page_3.dart';
 import 'package:flutter/material.dart';
 
 class Routes {
@@ -30,6 +31,11 @@ class Routes {
       case RoutesName.page2:
         {
           return MaterialPageRoute(builder: (BuildContext context) => Page2());
+        }
+
+      case RoutesName.page3:
+        {
+          return MaterialPageRoute(builder: (BuildContext context) => Page3());
         }
 
       default:

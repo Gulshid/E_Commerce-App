@@ -1,5 +1,6 @@
 // ignore_for_file: deprecated_member_use
 
+import 'package:e_commerce_app/Utils_/Routes/Routes_name.dart';
 import 'package:e_commerce_app/view_Model/E_Provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -24,9 +25,8 @@ class _Page2State extends State<Page2> {
         children: [
           // SizedBox(height: 100.h, width: 50.w,),
           Positioned.fill(
-            child:
-            Image.asset('assets/man_img.jpg', fit: BoxFit.fill,),
-            ),
+            child: Image.asset('assets/man_img.jpg', fit: BoxFit.fill),
+          ),
 
           Column(
             mainAxisAlignment: MainAxisAlignment.end,
@@ -70,6 +70,10 @@ class _Page2State extends State<Page2> {
                           InkWell(
                             onTap: () {
                               Pro.change_Color(true);
+                              Navigator.pushReplacementNamed(
+                                context,
+                                RoutesName.page3,
+                              );
                             },
                             child: Container(
                               height: 60.h,
@@ -84,7 +88,7 @@ class _Page2State extends State<Page2> {
                                           206,
                                           206,
                                         ).withOpacity(0.3),
-                          
+
                                 borderRadius: BorderRadius.circular(12.r),
                               ),
                               child: Center(
@@ -102,6 +106,10 @@ class _Page2State extends State<Page2> {
                           InkWell(
                             onTap: () {
                               Pro.change_Color(false);
+                              Navigator.popAndPushNamed(
+                                context,
+                                RoutesName.page3,
+                              );
                             },
                             child: Container(
                               height: 60.h,
@@ -132,10 +140,14 @@ class _Page2State extends State<Page2> {
                         ],
                       ),
 
+                      SizedBox(height: 20.h),
 
-                      SizedBox(height: 20.h,),
-
-                      Center(child: Text('Skip', style: TextStyle(color: Colors.grey, fontSize: 20.sp),),)
+                      Center(
+                        child: Text(
+                          'Skip',
+                          style: TextStyle(color: Colors.grey, fontSize: 20.sp),
+                        ),
+                      ),
                     ],
                   ),
                 ),

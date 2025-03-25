@@ -34,13 +34,13 @@ class MyApp extends StatelessWidget {
                 theme: ThemeData(
                   applyElevationOverlayColor: true,
                   brightness: Brightness.light,
-                  appBarTheme: AppBarTheme(color: Colors.blue),
+                  appBarTheme: AppBarTheme(color: Colors.white),
                   primarySwatch: Colors.blue,
                   textTheme: Typography.englishLike2018.apply(
                     fontSizeFactor: 1.sp,
                   ),
                 ),
-                initialRoute: RoutesName.page2,
+                initialRoute: RoutesName.page3,
                 onGenerateRoute: Routes.generateRoute,
               );
             },
