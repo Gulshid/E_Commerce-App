@@ -43,7 +43,7 @@ class _Page3State extends State<Page3> {
             onTap: ()=>Prov.launcherurl(),
             child: Container(
               height: 50.h,
-              width: 300.w,
+              width: 340.w,
               decoration: BoxDecoration(
                 color: Colors.indigo,
                 borderRadius: BorderRadius.circular(10.r),
@@ -67,7 +67,7 @@ class _Page3State extends State<Page3> {
           onTap: ()=>Prov.launcherurl2(),
             child: Container(
               height: 50.h,
-              width: 300.w,
+              width: 340.w,
               decoration: BoxDecoration(
                 color: Colors.blueAccent,
                 borderRadius: BorderRadius.circular(10.r),
@@ -91,7 +91,7 @@ class _Page3State extends State<Page3> {
             onTap: ()=>Prov.launcherurl3(),
             child: Container(
               height: 50.h,
-              width: 300.w,
+              width: 340.w,
               decoration: BoxDecoration(
                 color: Colors.red,
                 borderRadius: BorderRadius.circular(10.r),
@@ -109,7 +109,34 @@ class _Page3State extends State<Page3> {
               ),
             ),
           ),
-        ],
+
+          SizedBox(height: 200.h,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Text('Already have an account?', style: GoogleFonts.aBeeZee(color: Colors.grey, fontSize: 18.sp),),
+              InkWell(
+                onTap:(){},
+                child:  Text('Sign in', style: GoogleFonts.agbalumo(color: Colors.black, fontSize: 16.sp),))
+            ],
+          ),
+          SizedBox(height: 5.h,),
+          InkWell(
+            onTap: (){},
+            child: Container(
+              height: 65.h,
+              width: 340.w,
+              decoration: BoxDecoration(
+                color: Colors.blueAccent,
+                borderRadius: BorderRadius.circular(12.r)
+              ),
+            
+              child: Center(child: Text('Create an Account', style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.bold),)),
+            ),
+          )
+          
+      ]
       ),
     );
   }

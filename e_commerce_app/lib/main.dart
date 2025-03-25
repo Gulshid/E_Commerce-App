@@ -40,7 +40,8 @@ class MyApp extends StatelessWidget {
                     fontSizeFactor: 1.sp,
                   ),
                 ),
-                initialRoute: RoutesName.page3,
+                // home: ToggleSwitch(),
+                initialRoute: RoutesName.page4,
                 onGenerateRoute: Routes.generateRoute,
               );
             },

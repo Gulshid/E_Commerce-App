@@ -45,7 +45,7 @@ class EProvider with ChangeNotifier {
 
   //url launcher
   //for facebook
-  final Uri url1 = Uri.parse('https:/facebook.com');
+  final Uri url1 = Uri.parse('https://www.facebook.com/r.php');
   // ignore: unused_element
   Future<void> launcherurl() async {
     if (!await launchUrl(url1)) {
@@ -56,7 +56,7 @@ class EProvider with ChangeNotifier {
 
   //url launcher
   //for Twitter
-  final Uri url2 = Uri.parse('https:/twitter.com');
+  final Uri url2 = Uri.parse(' https://twitter.com/i/flow/signup');
   Future<void> launcherurl2() async {
     if (!await launchUrl(url2)) {
       throw Exception('Could not Launched $url2');
@@ -64,15 +64,23 @@ class EProvider with ChangeNotifier {
     notifyListeners();
   }
 
-
-   //url launcher
+  //url launcher
   //for Google
-  final Uri url3 = Uri.parse('https:/google.com');
+  final Uri url3 = Uri.parse('accounts.google.com/signin');
   Future<void> launcherurl3() async {
     // ignore: deprecated_member_use
     if (!await launchUrl(url3)) {
       throw Exception('Could not Launched $url3');
     }
+    notifyListeners();
+  }
+
+  bool _isSwitch = true;
+  bool get IsSwitch => _isSwitch;
+
+  void toggle_Switch(bool val) {
+    if(_isSwitch!=val)
+    _isSwitch = val;
     notifyListeners();
   }
 }
