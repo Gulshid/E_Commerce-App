@@ -34,4 +34,11 @@ class EProvider with ChangeNotifier {
       Navigator.pushReplacementNamed(context, RoutesName.page2);
     });
   }
+
+  //for Button colot change
+  bool c_index=true;
+  void change_Color(bool value){
+    c_index=value;
+    notifyListeners();   
+  }
 }
