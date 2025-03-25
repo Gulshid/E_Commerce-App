@@ -42,37 +42,72 @@ class _Page3State extends State<Page3> {
           InkWell(
             onTap: ()=>Prov.launcherurl(),
             child: Container(
-              height: 30.h,
+              height: 50.h,
               width: 300.w,
               decoration: BoxDecoration(
                 color: Colors.indigo,
                 borderRadius: BorderRadius.circular(10.r),
               ),
 
-              child: Center(child: Text('facebook', style: TextStyle(color: Colors.white),)),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CircleAvatar(
+                    backgroundImage:AssetImage('assets/facebook_icon.gif',)
+                  ),
+                  SizedBox(width: 10.w,),
+                  Center(child: Text('facebook', style: GoogleFonts.aBeeZee(color: Colors.white, fontSize: 18.sp),)),
+                ],
+              ),
             ),
           ),
-          SizedBox(height: 20.h),
-          Container(
-            height: 30.h,
-            width: 300.w,
-            decoration: BoxDecoration(
-              color: Colors.blueAccent,
-              borderRadius: BorderRadius.circular(10.r),
-            ),
 
-            child: Text('Twitter'),
+          SizedBox(height: 10.h),
+          InkWell(
+          onTap: ()=>Prov.launcherurl2(),
+            child: Container(
+              height: 50.h,
+              width: 300.w,
+              decoration: BoxDecoration(
+                color: Colors.blueAccent,
+                borderRadius: BorderRadius.circular(10.r),
+              ),
+            
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                CircleAvatar(
+                backgroundImage:  AssetImage('assets/twitter_icon.gif'),
+                ),
+
+                SizedBox(width: 10.w,),
+                  Center(child: Text('Twitter', style: GoogleFonts.aBeeZee(color: Colors.white, fontSize: 18.sp),)),
+                ],
+              ),
+            ),
           ),
-          SizedBox(height: 20.h),
-          Container(
-            height: 30.h,
-            width: 300.w,
-            decoration: BoxDecoration(
-              color: Colors.red,
-              borderRadius: BorderRadius.circular(10.r),
+          SizedBox(height: 10.h),
+          InkWell(
+            onTap: ()=>Prov.launcherurl3(),
+            child: Container(
+              height: 50.h,
+              width: 300.w,
+              decoration: BoxDecoration(
+                color: Colors.red,
+                borderRadius: BorderRadius.circular(10.r),
+              ),
+            
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CircleAvatar(
+                    backgroundImage: AssetImage('assets/google_icon.gif'),
+                  ),
+                  SizedBox(width: 5.w,),
+                  Text('Google', style: GoogleFonts.aBeeZee(color: Colors.white, fontSize: 18.sp),),
+                ],
+              ),
             ),
-
-            child: Text('Google'),
           ),
         ],
       ),

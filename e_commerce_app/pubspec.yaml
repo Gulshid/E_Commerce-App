@@ -95,6 +95,9 @@ flutter:
     - assets/E-Commerce.webp
     - assets/store_img.gif
     - assets/man_img.jpg
+    - assets/twitter_icon.gif
+    - assets/facebook_icon.gif
+    - assets/google_icon.gif
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

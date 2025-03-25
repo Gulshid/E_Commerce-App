@@ -44,11 +44,34 @@ class EProvider with ChangeNotifier {
   }
 
   //url launcher
-  final Uri url = Uri.parse('https://www.google.com/');
+  //for facebook
+  final Uri url1 = Uri.parse('https:/facebook.com');
   // ignore: unused_element
   Future<void> launcherurl() async {
-    if (!await launchUrl(url)) {
-      throw Exception('Could not Launched $url');
+    if (!await launchUrl(url1)) {
+      throw Exception('Could not Launched $url1');
+    }
+    notifyListeners();
+  }
+
+  //url launcher
+  //for Twitter
+  final Uri url2 = Uri.parse('https:/twitter.com');
+  Future<void> launcherurl2() async {
+    if (!await launchUrl(url2)) {
+      throw Exception('Could not Launched $url2');
+    }
+    notifyListeners();
+  }
+
+
+   //url launcher
+  //for Google
+  final Uri url3 = Uri.parse('https:/google.com');
+  Future<void> launcherurl3() async {
+    // ignore: deprecated_member_use
+    if (!await launchUrl(url3)) {
+      throw Exception('Could not Launched $url3');
     }
     notifyListeners();
   }
