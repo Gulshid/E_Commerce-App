@@ -1,8 +1,9 @@
 import 'package:e_commerce_app/Utils_/Routes/Routes_name.dart';
-import 'package:e_commerce_app/view_/toggle_switch.dart';
+import 'package:e_commerce_app/view_Model/E_Provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class Page4 extends StatefulWidget {
   const Page4({super.key});
@@ -14,48 +15,55 @@ class Page4 extends StatefulWidget {
 class _Page4State extends State<Page4> {
   @override
   Widget build(BuildContext context) {
+    final pro = Provider.of<EProvider>(context);
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
         leading: IconButton(
-          onPressed: ()=>Navigator.popAndPushNamed(context, RoutesName.page3),
-          icon: Icon(Icons.arrow_back, color: Colors.black,)),
+          onPressed: () => Navigator.popAndPushNamed(context, RoutesName.page3),
+          icon: Icon(Icons.arrow_back, color: Colors.black),
+        ),
       ),
-
 
       body: Column(
         children: [
-          SizedBox(height: 30.h,),
-          Center(child: Text('Sign Up', style: GoogleFonts.agbalumo(fontSize: 30.sp, color: Colors.black),),),
-        SizedBox(height: 50.h,),
+          SizedBox(height: 30.h),
+          Center(
+            child: Text(
+              'Sign Up',
+              style: GoogleFonts.agbalumo(fontSize: 30.sp, color: Colors.black),
+            ),
+          ),
+          SizedBox(height: 50.h),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20.0),
+            padding: const EdgeInsets.symmetric(
+              horizontal: 20.0,
+              vertical: 20.0,
+            ),
             child: TextFormField(
-              style: TextStyle(
-                color: Colors.black,
-              ),
+              style: TextStyle(color: Colors.black),
               decoration: InputDecoration(
                 labelStyle: TextStyle(color: Colors.black),
-                suffixIcon: Icon(Icons.check, color: Colors.green,),
+                suffixIcon: Icon(Icons.check, color: Colors.green),
                 label: Text('Username'),
                 hintStyle: TextStyle(color: Colors.grey),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8.r),
                 ),
-                enabledBorder: OutlineInputBorder(   borderRadius: BorderRadius.circular(10.r),),
-
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10.r),
+                ),
               ),
-
-              
             ),
           ),
 
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 20.0),
+            padding: const EdgeInsets.symmetric(
+              vertical: 20.0,
+              horizontal: 20.0,
+            ),
             child: TextFormField(
-              style: TextStyle(
-                color: Colors.black,
-              ),
+              style: TextStyle(color: Colors.black),
               decoration: InputDecoration(
                 labelStyle: TextStyle(color: Colors.black),
                 suffixText: 'Strong',
@@ -65,44 +73,53 @@ class _Page4State extends State<Page4> {
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8.r),
                 ),
-                enabledBorder: OutlineInputBorder(   borderRadius: BorderRadius.circular(10.r),),
-
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10.r),
+                ),
               ),
-
-              
             ),
           ),
 
           Padding(
-            padding: const EdgeInsets.symmetric( horizontal: 20.0),
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: TextFormField(
-              style: TextStyle(
-                color: Colors.black,
-              ),
+              style: TextStyle(color: Colors.black),
               decoration: InputDecoration(
                 labelStyle: TextStyle(color: Colors.black),
-                suffixIcon: Icon(Icons.check, color: Colors.green,),
+                suffixIcon: Icon(Icons.check, color: Colors.green),
                 label: Text('Email Address'),
                 hintStyle: TextStyle(color: Colors.grey),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8.r),
                 ),
-                enabledBorder: OutlineInputBorder(   borderRadius: BorderRadius.circular(10.r),),
-
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10.r),
+                ),
               ),
-
-              
             ),
           ),
 
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('Remember me'),
-              ToggleSwitch(),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 18.0),
+                child: Text('Remember me', style: TextStyle(color: Colors.black),),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                child: Switch(
+                  activeColor: Colors.green,
+                  autofocus: true,              
+                  inactiveThumbColor: Colors.blueGrey,
+                  value: pro.IsSwitch,
+                  onChanged: (value) {
+                    pro.toggle_Switch(value);
+                  },
+                ),
+              ),
             ],
-          )
-
+          ),
         ],
       ),
     );

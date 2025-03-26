@@ -56,7 +56,7 @@ class EProvider with ChangeNotifier {
 
   //url launcher
   //for Twitter
-  final Uri url2 = Uri.parse(' https://twitter.com/i/flow/signup');
+  final Uri url2 = Uri.parse('https://twitter.com');
   Future<void> launcherurl2() async {
     if (!await launchUrl(url2)) {
       throw Exception('Could not Launched $url2');
@@ -79,7 +79,6 @@ class EProvider with ChangeNotifier {
   bool get IsSwitch => _isSwitch;
 
   void toggle_Switch(bool val) {
-    if(_isSwitch!=val)
     _isSwitch = val;
     notifyListeners();
   }

@@ -48,6 +48,8 @@ dependencies:
   flutter_screenutil: ^5.9.3
   #url_ launcher
   url_launcher: ^6.3.1
+  #Switch_toggle
+  animated_toggle_switch: ^0.8.4
 
 
 dev_dependencies:

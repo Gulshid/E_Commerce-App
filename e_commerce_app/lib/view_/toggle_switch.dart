@@ -15,13 +15,14 @@ class _ToggleSwitchState extends State<ToggleSwitch> {
     final p = Provider.of<EProvider>(context);
     return Scaffold(
       body: Switch(
+        activeColor: Colors.green,
         value: p.IsSwitch,
         onChanged: (value) {
           p.toggle_Switch(value);
         },
       
-        activeColor: Colors.white,
-        activeTrackColor: Colors.green,
+        // activeColor: Colors.white,
+        
         inactiveThumbColor: Colors.white,
         inactiveTrackColor: Colors.grey,
       ),
