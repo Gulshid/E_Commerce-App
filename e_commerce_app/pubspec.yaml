@@ -50,6 +50,8 @@ dependencies:
   url_launcher: ^6.3.1
   #Switch_toggle
   animated_toggle_switch: ^0.8.4
+  #Image Picker
+  image_picker: ^1.0.7
 
 
 dev_dependencies:

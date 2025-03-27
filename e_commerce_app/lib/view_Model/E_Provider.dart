@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:e_commerce_app/Utils_/Routes/Routes_name.dart';
 import 'package:flutter/widgets.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class EProvider with ChangeNotifier {
@@ -88,8 +91,23 @@ class EProvider with ChangeNotifier {
   int _selected = 0;
   int get selected => _selected;
 
-  void Change_Selected(int v) {
-    v = _selected;
+  void Change_Selected(int index) {
+    _selected = index;
     notifyListeners();
+  }
+
+  //future function for image
+  File? _image;
+  File? get image => _image;
+
+  Future<void> get_image() async {
+    final Picked_File = await ImagePicker().pickImage(
+      source: ImageSource.gallery,
+    );
+
+    if (Picked_File != null) {
+      _image = File(Picked_File.path);
+      notifyListeners();
+    }
   }
 }
