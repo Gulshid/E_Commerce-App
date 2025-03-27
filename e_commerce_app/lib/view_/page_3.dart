@@ -117,13 +117,17 @@ class _Page3State extends State<Page3> {
             children: [
               Text('Already have an account?', style: GoogleFonts.aBeeZee(color: Colors.grey, fontSize: 18.sp),),
               InkWell(
-                onTap:(){},
-                child:  Text('Sign in', style: GoogleFonts.agbalumo(color: Colors.black, fontSize: 16.sp),))
+                onTap:(){
+                  Navigator.pushReplacementNamed(context, RoutesName.SignUp);
+                },
+                child:  Text('Sign Up', style: GoogleFonts.agbalumo(color: Colors.black, fontSize: 16.sp),))
             ],
           ),
           SizedBox(height: 5.h,),
           InkWell(
-            onTap: (){},
+            onTap: (){
+              Navigator.pushReplacementNamed(context, RoutesName.SignUp);
+            },
             child: Container(
               height: 65.h,
               width: 340.w,

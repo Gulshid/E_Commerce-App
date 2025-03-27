@@ -75,11 +75,21 @@ class EProvider with ChangeNotifier {
     notifyListeners();
   }
 
+  // for switch toggle
   bool _isSwitch = true;
   bool get IsSwitch => _isSwitch;
 
   void toggle_Switch(bool val) {
     _isSwitch = val;
+    notifyListeners();
+  }
+
+  //for bottom Navigation bar
+  int _selected = 0;
+  int get selected => _selected;
+
+  void Change_Selected(int v) {
+    v = _selected;
     notifyListeners();
   }
 }

@@ -4,6 +4,6 @@ class RoutesName {
   static const String page1 = 'Page1';
   static const String page2 = 'Page2';
   static const String page3 = 'Page3';
-  static const String page4 = 'Page4';
-  static const String page5 = 'Page5';
+  static const String SignUp = 'SignUp Screen';
+  static const String login = 'Login Screen';
 }

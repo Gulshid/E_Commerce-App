@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
                 // home: ToggleSwitch(),
-                initialRoute: RoutesName.page4,
+                initialRoute: RoutesName.home,
                 onGenerateRoute: Routes.generateRoute,
               );
             },
