@@ -1,6 +1,9 @@
+// ignore_for_file: dead_code
+
 import 'dart:io';
 
 import 'package:e_commerce_app/Utils_/Routes/Routes_name.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -109,5 +112,43 @@ class EProvider with ChangeNotifier {
       _image = File(Picked_File.path);
       notifyListeners();
     }
+  }
+
+  //dark and light mode toggle Switch
+  bool _isDarkMode = false;
+
+  bool get isDarkMode => _isDarkMode;
+
+  ThemeMode get themeMode => _isDarkMode ? ThemeMode.dark : ThemeMode.light;
+
+  void toggleTheme() {
+    _isDarkMode = !_isDarkMode;
+    notifyListeners();
+  }
+
+  ThemeData get lightTheme {
+    return ThemeData(
+      brightness: Brightness.light,
+      scaffoldBackgroundColor: Colors.white,
+      appBarTheme: AppBarTheme(
+        backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
+      ),
+      textTheme: TextTheme(bodyLarge: TextStyle(color: Colors.black)),
+      iconTheme: IconThemeData(color: Colors.black),
+    );
+  }
+
+  ThemeData get darkTheme {
+    return ThemeData(
+      brightness: Brightness.dark,
+      scaffoldBackgroundColor: Colors.black,
+      appBarTheme: AppBarTheme(
+        backgroundColor: Colors.grey[900],
+        foregroundColor: Colors.white,
+      ),
+      textTheme: TextTheme(bodyLarge: TextStyle(color: Colors.white)),
+      iconTheme: IconThemeData(color: Colors.white),
+    );
   }
 }

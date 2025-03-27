@@ -28,18 +28,25 @@ class MyApp extends StatelessWidget {
 
           child: Builder(
             builder: (BuildContext context) {
+              final pro = Provider.of<EProvider>(context);
               return MaterialApp(
                 debugShowCheckedModeBanner: false,
                 title: 'ECommerce App',
-                theme: ThemeData(
-                  applyElevationOverlayColor: true,
-                  brightness: Brightness.light,
-                  appBarTheme: AppBarTheme(color: Colors.white),
-                  primarySwatch: Colors.blue,
-                  textTheme: Typography.englishLike2018.apply(
-                    fontSizeFactor: 1.sp,
-                  ),
-                ),
+                themeMode:pro.themeMode,
+                // theme: ThemeData(
+                //   applyElevationOverlayColor: true,
+                //   brightness: Brightness.light,
+                //   appBarTheme: AppBarTheme(color: Colors.white),
+                //   primarySwatch: Colors.blue,
+                //   textTheme: Typography.englishLike2018.apply(
+                //     fontSizeFactor: 1.sp,
+                    
+                //   ),
+                  
+                // ),
+                 
+                theme: pro.lightTheme,
+                darkTheme: pro.darkTheme,
                 // home: ToggleSwitch(),
                 initialRoute: RoutesName.home,
                 onGenerateRoute: Routes.generateRoute,

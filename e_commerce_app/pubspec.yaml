@@ -52,6 +52,8 @@ dependencies:
   animated_toggle_switch: ^0.8.4
   #Image Picker
   image_picker: ^1.0.7
+  #curved navigation bar
+  curved_navigation_bar: ^1.0.6
 
 
 dev_dependencies:
