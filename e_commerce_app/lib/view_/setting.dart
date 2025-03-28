@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class p4 extends StatelessWidget {
-  const p4({super.key});
+class Setting extends StatelessWidget {
+  const Setting({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -64,8 +64,8 @@ class DrawerMenu extends StatelessWidget {
             ),
 
             ListTile(
-              leading: Icon(Icons.light_mode_sharp, color: Colors.black),
-              title: Text('Dark Mode', style: TextStyle(color: Colors.black)),
+              leading: Icon(Icons.light_mode_sharp, color: pro.isDarkMode? Colors.white: Colors.black),
+              title: Text('Dark Mode', style: TextStyle(color: pro.isDarkMode? Colors.white: Colors.black, fontWeight: FontWeight.bold)),
               trailing: Switch(
                 activeColor: Colors.white,
                 inactiveTrackColor: const Color.fromARGB(255, 215, 214, 214),
@@ -77,6 +77,48 @@ class DrawerMenu extends StatelessWidget {
                 },
               ),
             ),
+
+
+            ListTile(
+              title: Text('Account Information', style: TextStyle(color: pro.isDarkMode? Colors.white: Colors.black,  fontWeight: FontWeight.bold),),
+              leading: Icon(Icons.info, color: pro.isDarkMode? Colors.white: Colors.black,),
+
+            ),
+
+
+            ListTile(
+              title: Text('Password', style: TextStyle(color: pro.isDarkMode? Colors.white: Colors.black,  fontWeight: FontWeight.bold),),
+              leading: Icon(Icons.lock_outline, color: pro.isDarkMode? Colors.white: Colors.black,),
+
+            ),
+
+            ListTile(
+              title: Text('Order', style: TextStyle(color: pro.isDarkMode? Colors.white: Colors.black,  fontWeight: FontWeight.bold),),
+              leading: Icon(Icons.shopify_sharp,size: 25.sp, color: pro.isDarkMode? Colors.white: Colors.black,),
+
+            ),
+
+            ListTile(
+              title: Text('My Cart', style: TextStyle(color: pro.isDarkMode? Colors.white: Colors.black,  fontWeight: FontWeight.bold),),
+              leading: Icon(Icons.card_travel,size: 25.sp, color: pro.isDarkMode? Colors.white: Colors.black,),
+
+            ),
+
+            ListTile(
+              title: Text('Wishlists', style: TextStyle(color: pro.isDarkMode? Colors.white: Colors.black,  fontWeight: FontWeight.bold),),
+              leading: Icon(Icons.favorite_border_sharp,size: 25.sp, color: pro.isDarkMode? Colors.white: Colors.black,),
+
+            ),
+
+            ListTile(
+              title: Text('Settings', style: TextStyle(color: pro.isDarkMode? Colors.white: Colors.black,  fontWeight: FontWeight.bold),),
+              leading: Icon(Icons.settings,size: 25.sp, color: pro.isDarkMode? Colors.white: Colors.black,),
+
+            ),
+
+
+
+
           ],
         ));
   

@@ -54,6 +54,10 @@ dependencies:
   image_picker: ^1.0.7
   #curved navigation bar
   curved_navigation_bar: ^1.0.6
+  flutter_svg: ^2.0.7
+  cached_network_image: ^3.3.0
+  intl: ^0.18.1
+  equatable: ^2.0.5
 
 
 dev_dependencies:
