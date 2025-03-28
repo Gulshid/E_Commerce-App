@@ -5,12 +5,19 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 
 class BottomBar extends StatelessWidget {
-  const BottomBar({super.key});
+  const BottomBar({super.key, required this .pro});
+
+  
+  final EProvider pro;
 
   @override
   Widget build(BuildContext context) {
     final pro = Provider.of<EProvider>(context);
     return Scaffold(
+      
+    appBar: AppBar(
+      backgroundColor: Colors.brown,
+    ),
       bottomNavigationBar: ClipRRect(
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(10.r),
