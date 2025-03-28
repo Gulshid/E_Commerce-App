@@ -6,6 +6,28 @@ class Whishlists extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('helloeo[o', style: TextStyle(color: Colors.green, fontSize: 30.sp),));
+    return GridView.count(
+      crossAxisCount: 3,
+      mainAxisSpacing: 10,
+      crossAxisSpacing: 10,
+      childAspectRatio: 2 / 3,
+      children: List.generate(36, (index) {
+        return Container(
+          height: 100.h,
+          width: 200.w,
+          decoration: BoxDecoration(
+            color: index.isOdd? Colors.lightBlue: Colors.limeAccent,
+            borderRadius: BorderRadius.circular(10),
+          ),
+
+          child: Center(
+            child: Text(
+              'hello:$index',
+              style: TextStyle(color: Colors.black, fontSize: 20.sp),
+            ),
+          ),
+        );
+      }),
+    );
   }
 }
