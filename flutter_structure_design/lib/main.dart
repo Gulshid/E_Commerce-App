@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
               final pro = Provider.of<EProvider>(context);
               return MaterialApp(
                 debugShowCheckedModeBanner: false,
-                title: 'ECommerce App',
+                title: "Flutter Structure Design",
                 themeMode: pro.themeMode,
 
                 // theme: ThemeData(

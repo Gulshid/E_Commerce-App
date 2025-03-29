@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="ECommerce App"
+        android:label="Flutter Structure Design"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
         <activity
